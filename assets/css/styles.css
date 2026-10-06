@@ -1,0 +1,17 @@
+:root{
+    --bg: #07111b;
+    --bg-2: #0b1724;
+    --panel: rgba(10, 22, 34, 0.92);
+    --panel-soft: rgba(18,31,45, 0.9);
+    --line: rgba(216,164,83, 0.28);
+    --gold: #dfa954;
+    --gold-2: #f1c26f;
+    --text: #f5f0e7;
+    --muted: #b8c0ca;
+    --ink: #131920;
+    --success: #87d8ad;
+    --danger: #ff9a9a;
+    --shadow: 0 24px 70px rbga(0, 0, 0, 0.32);
+    --radius: 1.1rem;
+    --max: 1180px;
+}
