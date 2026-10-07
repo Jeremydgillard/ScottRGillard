@@ -163,3 +163,35 @@ h2 { font-size: clamp (2rem, 4vw, 3.6rem); }
 h3 {font-size: 1.45rem; }
 .hero-copy p:not(.eyebrow) { max-width: 700px; color: #d7dde4; font-size: 1.08rem; }
 .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.7rem; }
+.section {padding: 5rem 0; }
+.section.compact { padding: 3.5rem 0; }
+.section-title-row {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+.section-title-row h2 { margin: 0; }
+.section-title-row p { margin: .5rem 0 0; color: var(--muted); max-width: 720px; }
+.text-link {color: var(--gold-2); text-decoration: none;font-weight: 700; }
+
+.book-grid {
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:1.3rem;
+}
+.book-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255, .09);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(17,31,45, .96),rbga(7,17,27, .97));
+    box-shadow: var(--shadow);
+}
+.book-cover-wrap {
+position: relative;
+padding: 1rem 1rem 0;
+background: linear-gradient(180, rgba(255,255,255, .02), transparent);
+}
