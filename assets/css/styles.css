@@ -14,7 +14,7 @@
     --shadow: 0 24px 70px rbga(0, 0, 0, 0.32);
     --radius: 1.1rem;
     --max: 1180px;
-}                                                                                                                                                                                                                                             
+}
 
 * {box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -196,7 +196,7 @@ h3 {font-size: 1.45rem; }
     overflow: hidden;
     border: 1px solid rgba(255,255,255, .09);
     border-radius: var(--radius);
-    background: 
+    background:
     linear-gradient(
         180deg,
         rgba(17,31,45, 0.96),
@@ -206,10 +206,10 @@ h3 {font-size: 1.45rem; }
 .book-cover-wrap {
 position: relative;
 padding: 1rem 1rem 0;
-background: 
+background:
 linear-gradient(
     180deg,
-     rgba(255,255,255, 0.02), 
+     rgba(255,255,255, 0.02),
      transparent
      );
 }
@@ -238,4 +238,76 @@ linear-gradient(
     letter-spacing: .12em;
     text-transform: uppercase;
 }
-    
+.feature-split,
+.content-grid {
+    display:grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 1.6rem;
+    align-items: stretch;
+}
+.panel {
+    border: 1px solid rgba(255,255,255, .09);
+    border-radius: var(--radius);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    }
+    .panel p, .lead {color: var(--muted); }
+    .coming-soon-panel {
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        background:
+        linear-gradient(180deg, rgba(4,12,20, .15), rgba(4,12,20, .96)),
+        url('../images/echoes-in-the-rain-coming-soon.jpg') center 35%/cover no-repeat;
+    }
+    .form-grid { display: grid; gap: .85rem}
+    label {display: grid; gap: .4rem; color: #e8e4dc; font-weight: 700;}
+    input, textarea {
+        width: 100%;
+        border: 1px solid rgba(255,255,255, .18);
+        border-radius:  .45rem;
+        background: rgba(2,9,15, .64);
+        color: var(--text);
+        padding: .85rem .95rem;
+        outline: none;
+    }
+    input::focus,
+    textarea:focus {
+        border-color: var(--gold);
+        box-shadow: 0 0 0 3px rgba(223, 169, 84, .12);
+    }
+    textarea { min-height: 160px; resize:vertical; }
+    .honeypot { position: absolute !important; left: -10000px !important; }
+    .form-status {min-height: 1.5rem; margin: 0; font-weight: 700; }
+    .form-status.success {color: var(--success); }
+    .form-status.error { color: var(--danger); }
+.newsletter-band {
+    border-top: 1px solid rgba(255,255,255, .08);
+    border-bottom: 1px solid rgba(255,255,255, .08);
+    background: linear-gradient(90deg, rgba(223,169,84, .1), rgba(223,169,84, .02));
+}
+.newsletter-inline {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, .9fr);
+    gap: 2rem;
+    align-items: center;
+}
+.newsletter-inline form {display: grid; grid-template-columns: 1fr auto; gap: .65rem; }
+.site-footer { border-top: 1px solid rgba(255,255,255, .08); background: #040b12; }
+.footer-wrap {
+    width: min(var(--max), calc(100% - 2rem));
+    margin: auto;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+}
+.footer-links {display: flex; gap: 1rem; flex-wrap: wrap; justify-content: end; }
+.footer-links a { color: var(--muted); text-decoration: none; }
+.footer-links a:hover {color: var(--gold-2); }
+
+.not-found { min-height: 70vh; display: grid; place-items: center; text-align: center; }
+
